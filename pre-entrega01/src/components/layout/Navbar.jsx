@@ -1,35 +1,36 @@
-import React from 'react';
-import { CartWidget } from '../common/CartWidget';
+import CartWidget from "../common/CartWidget";
+import * as React from "react";
+import Stack from "@mui/material/Stack";
+import Button from "@mui/material/Button";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { PiPlantBold } from "react-icons/pi";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <div className="container">
-        <h3 className="navbar-brand">Logo</h3>
-        <div className="collapse navbar-collapse">
-          <ul className="navbar-nav mr-auto">
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Todas
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Deportivas
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Urbanas
-              </a>
-            </li>
-          </ul>
-        </div>
-        <h4 className="ml-auto mr-2">Carrito</h4>
-        <CartWidget />
-      </div>
-    </nav>
+    <div className="navbar navbar-expand-lg navbar-light" style={{ backgroundColor: 'rgba(138,221,45,0.6)' }}>
+      <Stack spacing={5} direction="row" style={{ color: 'black' }}>
+        <h5>
+          {" "}
+          <PiPlantBold /> 4:20{" "}
+        </h5>
+        <Link to="/">
+          <Button variant="text"style={{ color: 'black' }}>Inicio</Button>
+        </Link>
+
+        <Link>
+          <Button variant="text"style={{ color: 'black' }}>Fotoperiódicas</Button>
+        </Link>
+        <Button variant="text"style={{ color: 'black' }}>Autoflorecientes</Button>
+        <Button variant="text"style={{ color: 'black' }}>Feminizadas</Button>
+
+        <Link to="/cart">
+          <CartWidget />
+        </Link>
+      </Stack>
+    </div>
   );
 };
+
 
 

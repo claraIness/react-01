@@ -1,11 +1,12 @@
-import React from 'react';
-import { FaShoppingCart } from 'react-icons/fa';
+import { LuShoppingCart } from "react-icons/lu";
 
-export const CartWidget = () => {
+const CartWidget = () => {
   return (
-    <div className="d-flex align-items-center">
-      <span className="mr-2">10</span>
-      <FaShoppingCart color="yellow" size={20} />
+    <div>
+      <span>10</span>
+      <LuShoppingCart />
     </div>
   );
 };
+
+export default CartWidget;
